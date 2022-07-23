@@ -1,0 +1,11 @@
+.Navbar { 
+    display : flex;
+    justify-content: center;
+}
+.botones { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px 50px 0px 50px ;
+    border-radius: 25px;
+    background-color: rgba(76, 144, 221, 0.377);
+    
+}

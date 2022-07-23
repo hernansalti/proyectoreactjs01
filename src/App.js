@@ -1,17 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Proximamente NONNO BAZAR
-        </p>
-        
-      </header>
+      <div>
+        <h1 class='titulo'>Tienda Nonno Bazar</h1>
+      </div>
+      <Navbar />
+      <ItemListContainer greeting='Bienvenidos'/> 
+
     </div>
+    
   );
 }
 
