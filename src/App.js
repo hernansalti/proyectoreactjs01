@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Counter from './Components/Counter/Counter';
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <h1 class='titulo'>Tienda Nonno Bazar</h1>
       </div>
       <Navbar />
-      <ItemListContainer greeting='Bienvenidos'/>
+      <ItemListContainer greeting='Listado de Productos'/>
+      <ItemDetailContainer/>
       <Counter stock={10} onAdd={handleOnAdd}/>
 
     </div>
