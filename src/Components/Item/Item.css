@@ -1,0 +1,9 @@
+.img {
+    margin-top: 20px;
+    width: 30vw;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px #5dc1b9;
+    display: flex;
+    width: 20vw;
+}
+

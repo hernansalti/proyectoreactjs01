@@ -22,7 +22,7 @@ const products = [
         category: 'Bazar',
         img:'images/Bazar01.jpeg',
         stock: 6,
-        description:'Aquiles destapador y Rompe hielo, metalico color cobre'
+        description:'Aquiles destapador y rompe hielo, metalico color cobre'
     }
 ]
 
