@@ -1,11 +1,16 @@
-.Navbar { 
-    display : flex;
+/* .Navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-}
-.botones { 
+    font-size: calc(10px + 2vmin);
+} */
+.Titulo{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 0px 50px 0px 50px ;
-    border-radius: 25px;
-    background-color: rgba(76, 144, 221, 0.377);
-    
+    text-decoration: none;
+    font-size: 55px;
+}
+.Categories{
+    display: flex;
+    justify-content: space-around;
 }
