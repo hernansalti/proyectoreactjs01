@@ -1,14 +1,14 @@
-/* .Navbar {
+.NavBar {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-} */
+    font-size: 2vw;
+}
 .Titulo{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
-    font-size: 55px;
+    color: black;
+    font-size: 40px;
 }
 .Categories{
     display: flex;

@@ -1,5 +1,7 @@
-.imagen{
-    display: flex;
-    justify-content: right;
-
+.CartImg{
+    width: 5vh;
+    background-color: rgba(0, 0, 0, 0.308);
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-left: 10vw;
 }
