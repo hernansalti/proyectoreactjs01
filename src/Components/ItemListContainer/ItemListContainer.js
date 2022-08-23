@@ -1,81 +1,37 @@
-// import './ItemListContainer.css'
-// import { useState, useEffect } from 'react'
-// import { getProductosNonno, getProductsByCategory} from '../../asyncMock'
-// import { useParams } from 'react-router-dom'
-
-// import ItemList from '../ItemList/ItemList'
-
-// const ItemListContainer = ({ greeting }) => {
-//     const [products, setProducts] = useState([])
-
-//     const { categoryId } = useParams()
-
-//     useEffect(() => {
-//         const asyncFunction = categoryId ? getProductsByCategory : getProductosNonno
-//         asyncFunction(categoryId).then(products => {
-//             setProducts(products)
-//         }).catch(error => {
-//             console.log(error)
-//         })
-     
-//     }, [categoryId])
-
-//     return (
-//         <>
-//             <h1>{greeting}</h1>
-//             <ItemList products={products}/>
-//         </>
-//     )
-// }
-
-// export default ItemListContainer
-
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
-import { getProductosNonno, getProductsByCategory } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom' 
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase'
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-
     const { categoryId } = useParams()
 
     useEffect(() => {
-        const onResize = (e) => {
-            console.log(e)
-            console.log('cambio tamaño de ventana')
-        }
-        window.addEventListener('resize', onResize)
+    setLoading (true)
+        const collectionRef = !categoryId 
+    ? collection(db, 'products')
+    : query(collection(db, 'products'), where('category', '==', categoryId))
 
-        
-        return () => {
-            window.removeEventListener('resize', onResize)
-        }
-    }, [])
+    getDocs(collectionRef).then(response => {
+        const productsAdapted = response.docs.map(doc => {
+            const data = doc.data()
+            return { id: doc.id, ...data}
+        })
+        setProducts(productsAdapted)
+    }).catch(error => {
+        console.log(error)
+    }).finally(() => {
+        setLoading(false)
+    })
 
-
-    useEffect(() => {
-        setLoading(true)
-        const asyncFunction = categoryId ? getProductsByCategory : getProductosNonno
-        
-        asyncFunction(categoryId).then(response => {
-            setProducts(response)
-        }).catch(error => {
-            console.log(error)
-        }).finally(() => {
-            setLoading(false)
-        })  
     }, [categoryId])
-
 
     if(loading) {
         return <h1>Cargando productos...</h1>
-    }
-
-    if(products.length === 0) {
-        return categoryId ? <h1>No hay productos en nuestra categoria {categoryId}</h1> : <h1>No hay productos disponibles </h1>
     }
 
     return (
