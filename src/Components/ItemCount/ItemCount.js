@@ -5,8 +5,8 @@ const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
    const [quantity, setQuantity] = useState(initial)
 
    useEffect(() => {
-    setQuantity(initial)
-}, [initial])
+        setQuantity(initial)
+   }, [initial])
 
    const increment = () => {
        if(quantity < stock) {
@@ -24,7 +24,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
        <div className='Counter'>          
             <div className='Controls'>
                 <button className="Button" onClick={decrement}>-</button>
-                    <div><h4 className='Number'>{quantity}</h4></div>
+                <h4 className='Number'>{quantity}</h4>
                 <button className="Button" onClick={increment}>+</button>
             </div>
             <div>

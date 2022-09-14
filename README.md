@@ -1,9 +1,15 @@
 #Tienda Nonno Bazar
 ***
-Descripcion: Este proyecto es una tienda de productos de bazar estilo e-commerce, donde ud. podra visualizar los productos con sus respectivas especificaciones, consultar stock disponible, calcular un presupuesto y realizar compras creando un usuario en muy sencillos pasos.
-***
-IMPORTANTE: Este proyecto aún está en desarrollo, ud. no va a poder incorporar productos al carrito, ni hacer una compra. Por el momento funcionará a modo de visualizador de productos, detalle de cada uno y simulador de compra.
+Descripción: Este proyecto es un e-commerce de artículos de bazar, donde ud. podra visualizar los productos con sus respectivas especificaciones, calcular un presupuesto y realizar compras creando un usuario en muy sencillos pasos.
 
+Funcionalidad:
+Al ingresar al producto deseado podrá ver su precio y descripción y agregar al carrito de compras las cantidades que desee del mismo.
+Al seleccionar las diferentes categorías de productos podrá ver los mismos filtrados según corresponde, ingresar a cada uno, ver su detalle y agregarlo al carrito de compras.
+Una vez seleccionados los productos que desea comprar, dirigiendose al extremo superior derecho podrá visualizar el carrito de compras, eliminar productos o vaciarlo.
+Al final del carrito de compras Ud podrá finalizar la misma completando un simple formulario con solo tres datos. Al finalizar el envio del formulario, recibirá en su casilla de mail un comprobante de orden de compra y el mismo le indicará los pasos a seguir*
+
+***
+*IMPORTANTE: Este proyecto aún está en desarrollo, ud. va a poder visualizar productos con su detalle, incorporarlos al carrito y simular una compra al enviar un formulario. No recibirá mail de confirmación, ya que, aún no está finalizado.
 
 # Getting Started with Create React App
 

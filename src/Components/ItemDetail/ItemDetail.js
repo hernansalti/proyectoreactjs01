@@ -25,9 +25,9 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const productQuantity = getProductQuantity(id)
 
     return (
-        <article className="App">
-            <header>
-                <h2>
+        <article className="CardItem">
+            <header className="Header">
+                <h2 className="ItemHeader">
                     {name}
                 </h2>
             </header>
@@ -35,14 +35,14 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 <img src={img} alt={name} className="ItemImg"/>
             </picture>
             <section>
-                <p>
+                <p className="Info">
                     Categoria: {category}
                 </p>
-                <p>
+                <p className="Info">
                     Descripción: {description}
                 </p>
-                <p>
-                    Precio: $ {price}
+                <p className="Info">
+                    Precio: {price}
                 </p>
             </section>           
             <footer className='ItemFooter'>
